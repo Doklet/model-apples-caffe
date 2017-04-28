@@ -1,0 +1,4 @@
+data/
+db/
+models/alexnet/*.caffemodel
+models/alexnet/*.solverstate
