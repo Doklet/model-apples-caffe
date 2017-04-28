@@ -23,3 +23,11 @@ create_mean:
 
 train:
 	cd ../../;./build/tools/caffe train --solver=examples/apples/models/alexnet/solver.prototxt --weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel -gpu 0
+
+classify:
+	cd ../../;./build/examples/cpp_classification/classification.bin \
+	  examples/apples/models/alexnet/deploy.prototxt \
+	  examples/apples/models/alexnet/caffe_alexnet_train_iter_1000.caffemodel \
+	  examples/apples/data/mean.binaryproto \
+	  examples/apples/data/labels.txt \
+	  examples/apples/data/images/thumb_IMG_0589_1024.jpg
